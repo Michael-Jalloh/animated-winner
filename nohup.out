@@ -1,0 +1,122 @@
+01:17:35 RQ worker u'rq:worker:Bolt.8448' started, version 0.12.0
+01:17:35 *** Listening on halis...
+01:17:35 Cleaning registries for queue: halis
+01:17:37 Warm shut down requested
+01:18:15 RQ worker u'rq:worker:Bolt.8466' started, version 0.12.0
+01:18:15 *** Listening on halis...
+01:18:15 Cleaning registries for queue: halis
+01:18:54 halis: transaction_helper.make_transaction(<models.User object at 0x7fb8c64c2990>, amount=u'20', asset_ids='', asset_type='coins', creator=u'user-4afaca2d-846e-45bd-b48a-f944f9941d03', data=None, last_tx=None, receiver=u'user-d3d133d2-aaa2-45b9-8911-754b1948b233', sender=u'user-4afaca2d-846e-45bd-b48a-f944f9941d03', signature=u'lhhUhlKi7lVdWGea/VJVbpqxDgM4yb2pDCnyvkMkQLbr0hUtUWQ6eVLGzeY74wi9kXmoSWbRKdEn\nUJZdG2fP5qAlZvm0DrJPO86I9d7csAtPC3ZQ/tjPXwF6yPwonW6EG11fMwf5heBecpI2h01TqS5D\nowefr2sajJDVoyzd4ZgjgXPumixxp/+mOFp++9tw/0LEQXQhmZVgV7ggkY9JX4/XEpVjUo7kF2M+\nLDqtyyS0gcTZ4nqjMJyVQmtQhgK0PtvbLNBvWFC076oa1CO7Iub+5zRpV1P7Kgq2n16+ONa+bAnb\n0FFzR5T7KVPC5sV/WKqqWItKaPJ5TUWKrrplrA==\n', timestamp=u'2018-10-26 01:18:53', tx=None) (ee52ee3f-34aa-4733-b56b-58e003b633e4)
+Traceback (most recent call last):
+  File "/home/michael/.virtualenvs/halis/bin/rqworker", line 11, in <module>
+    sys.exit(worker())
+  File "/home/michael/.virtualenvs/halis/local/lib/python2.7/site-packages/click/core.py", line 722, in __call__
+    return self.main(*args, **kwargs)
+  File "/home/michael/.virtualenvs/halis/local/lib/python2.7/site-packages/click/core.py", line 697, in main
+    rv = self.invoke(ctx)
+  File "/home/michael/.virtualenvs/halis/local/lib/python2.7/site-packages/click/core.py", line 895, in invoke
+    return ctx.invoke(self.callback, **ctx.params)
+  File "/home/michael/.virtualenvs/halis/local/lib/python2.7/site-packages/click/core.py", line 535, in invoke
+    return callback(*args, **kwargs)
+  File "/home/michael/.virtualenvs/halis/local/lib/python2.7/site-packages/rq/cli/cli.py", line 75, in wrapper
+    return ctx.invoke(func, cli_config, *args[1:], **kwargs)
+  File "/home/michael/.virtualenvs/halis/local/lib/python2.7/site-packages/click/core.py", line 535, in invoke
+    return callback(*args, **kwargs)
+  File "/home/michael/.virtualenvs/halis/local/lib/python2.7/site-packages/rq/cli/cli.py", line 236, in worker
+    worker.work(burst=burst, logging_level=logging_level)
+  File "/home/michael/.virtualenvs/halis/local/lib/python2.7/site-packages/rq/worker.py", line 493, in work
+    self.execute_job(job, queue)
+  File "/home/michael/.virtualenvs/halis/local/lib/python2.7/site-packages/rq/worker.py", line 662, in execute_job
+    self.fork_work_horse(job, queue)
+  File "/home/michael/.virtualenvs/halis/local/lib/python2.7/site-packages/rq/worker.py", line 599, in fork_work_horse
+    self.main_work_horse(job, queue)
+  File "/home/michael/.virtualenvs/halis/local/lib/python2.7/site-packages/rq/worker.py", line 677, in main_work_horse
+    success = self.perform_job(job, queue)
+  File "/home/michael/.virtualenvs/halis/local/lib/python2.7/site-packages/rq/worker.py", line 781, in perform_job
+    self.prepare_job_execution(job)
+  File "/home/michael/.virtualenvs/halis/local/lib/python2.7/site-packages/rq/worker.py", line 712, in prepare_job_execution
+    self.procline(msg.format(job.func_name, job.origin, time.time()))
+  File "/home/michael/.virtualenvs/halis/local/lib/python2.7/site-packages/rq/job.py", line 248, in func_name
+    self._unpickle_data()
+  File "/home/michael/.virtualenvs/halis/local/lib/python2.7/site-packages/rq/job.py", line 216, in _unpickle_data
+    self._func_name, self._instance, self._args, self._kwargs = unpickle(self.data)
+  File "/home/michael/.virtualenvs/halis/local/lib/python2.7/site-packages/rq/job.py", line 54, in unpickle
+    raise UnpickleError('Could not unpickle', pickled_string, e)
+rq.exceptions.UnpickleError: (u'Could not unpickle', ImportError('No module named models',))
+01:18:54 Moving job to u'failed' queue (work-horse terminated unexpectedly; waitpid returned 256)
+01:19:14 halis: transaction_helper.make_transaction(<models.User object at 0x7fb8c64c2990>, amount=u'20', asset_ids='', asset_type='coins', creator=u'user-4afaca2d-846e-45bd-b48a-f944f9941d03', data=None, last_tx=None, receiver=u'user-d3d133d2-aaa2-45b9-8911-754b1948b233', sender=u'user-4afaca2d-846e-45bd-b48a-f944f9941d03', signature=u'CPAeYmudQixZIkMbEjC1QhVTZOJ4N+QHu4Hegyi3ql0EqoYFe+8jXJdynS9l2SsmsLp08jnBNqWc\ncXXoFrCknw5UjjlaH0LrVz2Qh4V/l9PRCRs+10aL379c9U5m2eaFS1G2FpCC8AKOMBSRi2vtHvYm\nTkH4Fh/Na64bkeLT56DQSRw+qlLmkhPUjraxU5EEYywVtxH2s3j3lTCxQ8sAD8L6uXsN1TT0i2W1\nfIK3fQntrT0vNqsyEYGgD10gtANcPSnowhoGm/qOvDURZbfvvLB8O1TnETrpGOeKWeGM0U9iWDxu\nRB911avn8XhbK2EwgJFIZfs+V3a/7j0XU66jdA==\n', timestamp=u'2018-10-26 01:19:13', tx=None) (d8bdf374-ff60-4bb2-aff7-c63311b36174)
+Traceback (most recent call last):
+  File "/home/michael/.virtualenvs/halis/bin/rqworker", line 11, in <module>
+    sys.exit(worker())
+  File "/home/michael/.virtualenvs/halis/local/lib/python2.7/site-packages/click/core.py", line 722, in __call__
+    return self.main(*args, **kwargs)
+  File "/home/michael/.virtualenvs/halis/local/lib/python2.7/site-packages/click/core.py", line 697, in main
+    rv = self.invoke(ctx)
+  File "/home/michael/.virtualenvs/halis/local/lib/python2.7/site-packages/click/core.py", line 895, in invoke
+    return ctx.invoke(self.callback, **ctx.params)
+  File "/home/michael/.virtualenvs/halis/local/lib/python2.7/site-packages/click/core.py", line 535, in invoke
+    return callback(*args, **kwargs)
+  File "/home/michael/.virtualenvs/halis/local/lib/python2.7/site-packages/rq/cli/cli.py", line 75, in wrapper
+    return ctx.invoke(func, cli_config, *args[1:], **kwargs)
+  File "/home/michael/.virtualenvs/halis/local/lib/python2.7/site-packages/click/core.py", line 535, in invoke
+    return callback(*args, **kwargs)
+  File "/home/michael/.virtualenvs/halis/local/lib/python2.7/site-packages/rq/cli/cli.py", line 236, in worker
+    worker.work(burst=burst, logging_level=logging_level)
+  File "/home/michael/.virtualenvs/halis/local/lib/python2.7/site-packages/rq/worker.py", line 493, in work
+    self.execute_job(job, queue)
+  File "/home/michael/.virtualenvs/halis/local/lib/python2.7/site-packages/rq/worker.py", line 662, in execute_job
+    self.fork_work_horse(job, queue)
+  File "/home/michael/.virtualenvs/halis/local/lib/python2.7/site-packages/rq/worker.py", line 599, in fork_work_horse
+    self.main_work_horse(job, queue)
+  File "/home/michael/.virtualenvs/halis/local/lib/python2.7/site-packages/rq/worker.py", line 677, in main_work_horse
+    success = self.perform_job(job, queue)
+  File "/home/michael/.virtualenvs/halis/local/lib/python2.7/site-packages/rq/worker.py", line 781, in perform_job
+    self.prepare_job_execution(job)
+  File "/home/michael/.virtualenvs/halis/local/lib/python2.7/site-packages/rq/worker.py", line 712, in prepare_job_execution
+    self.procline(msg.format(job.func_name, job.origin, time.time()))
+  File "/home/michael/.virtualenvs/halis/local/lib/python2.7/site-packages/rq/job.py", line 248, in func_name
+    self._unpickle_data()
+  File "/home/michael/.virtualenvs/halis/local/lib/python2.7/site-packages/rq/job.py", line 216, in _unpickle_data
+    self._func_name, self._instance, self._args, self._kwargs = unpickle(self.data)
+  File "/home/michael/.virtualenvs/halis/local/lib/python2.7/site-packages/rq/job.py", line 54, in unpickle
+    raise UnpickleError('Could not unpickle', pickled_string, e)
+rq.exceptions.UnpickleError: (u'Could not unpickle', ImportError('No module named models',))
+01:19:14 Moving job to u'failed' queue (work-horse terminated unexpectedly; waitpid returned 256)
+01:21:33 halis: transaction_helper.make_transaction(<models.User object at 0x7fb8c64c2990>, amount=u'30', asset_ids='', asset_type='coins', creator=u'user-4afaca2d-846e-45bd-b48a-f944f9941d03', data=None, last_tx=None, receiver=u'user-d3d133d2-aaa2-45b9-8911-754b1948b233', sender=u'user-4afaca2d-846e-45bd-b48a-f944f9941d03', signature=u'4VreSkBRf8VWMXKsSpC80B80NYn+aYfpCKHiLnHiSNp8qrG77yvUd8cyY6hTGpP1p6W2Qy8peODG\n+Bc+MDZc+Ro12hHv3OUG8kbVXoU/pSVq57aZaqLdiZVQq2tfFHVJ/WQPm2IPMA0wvaFS2yd14LsA\nhVYP4QvAXfftrcfQjNLEFwDJvN13BV82/TZFbQsKJxGykC+fzww8qF4TwZ/i73vmtDTCwiab3za5\nOYKPB7aVZnFC+XyBls8QXM2A5k9/5KrbkI2MPJLHG5p4EAlatWbGWMZif8IRwsAjK0G35n3TiFM4\n1V3r6JiK0h8KRD+ONpnG0lLFaD0cZCN2XxoBnQ==\n', timestamp=u'2018-10-26 01:21:33', tx=None) (1754e12c-9348-4a62-8ea2-d1b91335b6bb)
+Traceback (most recent call last):
+  File "/home/michael/.virtualenvs/halis/bin/rqworker", line 11, in <module>
+    sys.exit(worker())
+  File "/home/michael/.virtualenvs/halis/local/lib/python2.7/site-packages/click/core.py", line 722, in __call__
+    return self.main(*args, **kwargs)
+  File "/home/michael/.virtualenvs/halis/local/lib/python2.7/site-packages/click/core.py", line 697, in main
+    rv = self.invoke(ctx)
+  File "/home/michael/.virtualenvs/halis/local/lib/python2.7/site-packages/click/core.py", line 895, in invoke
+    return ctx.invoke(self.callback, **ctx.params)
+  File "/home/michael/.virtualenvs/halis/local/lib/python2.7/site-packages/click/core.py", line 535, in invoke
+    return callback(*args, **kwargs)
+  File "/home/michael/.virtualenvs/halis/local/lib/python2.7/site-packages/rq/cli/cli.py", line 75, in wrapper
+    return ctx.invoke(func, cli_config, *args[1:], **kwargs)
+  File "/home/michael/.virtualenvs/halis/local/lib/python2.7/site-packages/click/core.py", line 535, in invoke
+    return callback(*args, **kwargs)
+  File "/home/michael/.virtualenvs/halis/local/lib/python2.7/site-packages/rq/cli/cli.py", line 236, in worker
+    worker.work(burst=burst, logging_level=logging_level)
+  File "/home/michael/.virtualenvs/halis/local/lib/python2.7/site-packages/rq/worker.py", line 493, in work
+    self.execute_job(job, queue)
+  File "/home/michael/.virtualenvs/halis/local/lib/python2.7/site-packages/rq/worker.py", line 662, in execute_job
+    self.fork_work_horse(job, queue)
+  File "/home/michael/.virtualenvs/halis/local/lib/python2.7/site-packages/rq/worker.py", line 599, in fork_work_horse
+    self.main_work_horse(job, queue)
+  File "/home/michael/.virtualenvs/halis/local/lib/python2.7/site-packages/rq/worker.py", line 677, in main_work_horse
+    success = self.perform_job(job, queue)
+  File "/home/michael/.virtualenvs/halis/local/lib/python2.7/site-packages/rq/worker.py", line 781, in perform_job
+    self.prepare_job_execution(job)
+  File "/home/michael/.virtualenvs/halis/local/lib/python2.7/site-packages/rq/worker.py", line 712, in prepare_job_execution
+    self.procline(msg.format(job.func_name, job.origin, time.time()))
+  File "/home/michael/.virtualenvs/halis/local/lib/python2.7/site-packages/rq/job.py", line 248, in func_name
+    self._unpickle_data()
+  File "/home/michael/.virtualenvs/halis/local/lib/python2.7/site-packages/rq/job.py", line 216, in _unpickle_data
+    self._func_name, self._instance, self._args, self._kwargs = unpickle(self.data)
+  File "/home/michael/.virtualenvs/halis/local/lib/python2.7/site-packages/rq/job.py", line 54, in unpickle
+    raise UnpickleError('Could not unpickle', pickled_string, e)
+rq.exceptions.UnpickleError: (u'Could not unpickle', ImportError('No module named models',))
+01:21:34 Moving job to u'failed' queue (work-horse terminated unexpectedly; waitpid returned 256)
+01:22:11 Warm shut down requested

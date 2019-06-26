@@ -1,0 +1,59 @@
+2019-01-15 13:35:57,548 CRIT Supervisor is running as root.  Privileges were not dropped because no user is specified in the config file.  If you intend to run as root, you can set user=root in the config file to avoid this message.
+2019-01-15 13:35:57,551 INFO supervisord started with pid 1
+2019-01-15 13:35:58,555 INFO spawned: 'worker' with pid 9
+2019-01-15 13:35:58,557 INFO spawned: 'nginx' with pid 10
+2019-01-15 13:35:58,561 INFO spawned: 'redis' with pid 11
+2019-01-15 13:35:58,565 INFO spawned: 'memcached' with pid 12
+2019-01-15 13:35:58,569 INFO spawned: 'uwsgi' with pid 13
+2019-01-15 13:35:59,773 INFO success: worker entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2019-01-15 13:35:59,773 INFO success: nginx entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2019-01-15 13:35:59,774 INFO success: redis entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2019-01-15 13:35:59,774 INFO success: memcached entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2019-01-15 13:35:59,774 INFO success: uwsgi entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2019-01-15 13:41:56,206 WARN received SIGTERM indicating exit request
+2019-01-15 13:41:56,207 INFO waiting for worker, nginx, redis, memcached, uwsgi to die
+2019-01-15 13:41:57,212 INFO stopped: uwsgi (exit status 0)
+2019-01-15 13:41:57,214 INFO stopped: memcached (exit status 0)
+2019-01-15 13:41:57,329 INFO stopped: redis (exit status 0)
+2019-01-15 13:41:57,346 INFO exited: worker (exit status 1; not expected)
+2019-01-15 13:41:57,372 INFO stopped: nginx (exit status 0)
+2019-01-15 13:46:12,897 CRIT Supervisor is running as root.  Privileges were not dropped because no user is specified in the config file.  If you intend to run as root, you can set user=root in the config file to avoid this message.
+2019-01-15 13:46:12,899 INFO supervisord started with pid 1
+2019-01-15 13:46:13,902 INFO spawned: 'worker' with pid 11
+2019-01-15 13:46:13,904 INFO spawned: 'nginx' with pid 12
+2019-01-15 13:46:13,906 INFO spawned: 'redis' with pid 13
+2019-01-15 13:46:13,910 INFO spawned: 'memcached' with pid 14
+2019-01-15 13:46:13,918 INFO spawned: 'uwsgi' with pid 15
+2019-01-15 13:46:15,115 INFO success: worker entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2019-01-15 13:46:15,115 INFO success: nginx entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2019-01-15 13:46:15,115 INFO success: redis entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2019-01-15 13:46:15,116 INFO success: memcached entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2019-01-15 13:46:15,116 INFO success: uwsgi entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2019-06-26 12:57:04,411 CRIT Supervisor is running as root.  Privileges were not dropped because no user is specified in the config file.  If you intend to run as root, you can set user=root in the config file to avoid this message.
+2019-06-26 12:57:04,414 INFO supervisord started with pid 1
+2019-06-26 12:57:05,418 INFO spawned: 'main' with pid 7
+2019-06-26 12:57:06,578 INFO success: main entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2019-06-26 12:59:33,697 WARN received SIGTERM indicating exit request
+2019-06-26 12:59:33,698 INFO waiting for main to die
+2019-06-26 12:59:33,700 INFO stopped: main (terminated by SIGTERM)
+2019-06-26 12:59:54,750 CRIT Supervisor is running as root.  Privileges were not dropped because no user is specified in the config file.  If you intend to run as root, you can set user=root in the config file to avoid this message.
+2019-06-26 12:59:54,752 INFO supervisord started with pid 1
+2019-06-26 12:59:55,757 INFO spawned: 'main' with pid 7
+2019-06-26 12:59:56,905 INFO success: main entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2019-06-26 13:04:14,497 WARN received SIGTERM indicating exit request
+2019-06-26 13:04:14,510 INFO waiting for main to die
+2019-06-26 13:04:14,513 INFO stopped: main (terminated by SIGTERM)
+2019-06-26 13:04:38,015 CRIT Supervisor is running as root.  Privileges were not dropped because no user is specified in the config file.  If you intend to run as root, you can set user=root in the config file to avoid this message.
+2019-06-26 13:04:38,018 INFO supervisord started with pid 1
+2019-06-26 13:04:39,021 INFO spawned: 'main' with pid 7
+2019-06-26 13:04:40,331 INFO success: main entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2019-06-26 13:05:00,345 WARN received SIGTERM indicating exit request
+2019-06-26 13:05:00,345 INFO waiting for main to die
+2019-06-26 13:05:00,347 INFO stopped: main (terminated by SIGTERM)
+2019-06-26 13:17:09,633 CRIT Supervisor is running as root.  Privileges were not dropped because no user is specified in the config file.  If you intend to run as root, you can set user=root in the config file to avoid this message.
+2019-06-26 13:17:09,635 INFO supervisord started with pid 1
+2019-06-26 13:17:10,640 INFO spawned: 'main' with pid 7
+2019-06-26 13:17:11,928 INFO success: main entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2019-06-26 13:17:23,814 WARN received SIGTERM indicating exit request
+2019-06-26 13:17:23,815 INFO waiting for main to die
+2019-06-26 13:17:23,817 INFO stopped: main (terminated by SIGTERM)
